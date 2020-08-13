@@ -120,6 +120,12 @@ venv.bak/
 # mkdocs documentation
 /site
 
+#config
+.config.py
+config.py
+*config.py
+*Config.py
+
 # mypy
 .mypy_cache/
 .dmypy.json
