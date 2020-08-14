@@ -16,7 +16,7 @@ const margin = {
 let barPadding = (height-(margin.bottom+margin.top))/(top_n*5);
 
 //Setup tick duration
-const tickDuration = 350;
+const tickDuration = 450;
 
 //Create svg wrapper to append into to hold chart  
 const svg = d3.select("body").append("svg")
