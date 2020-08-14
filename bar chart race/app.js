@@ -8,9 +8,9 @@ const width = 960;
     
 const margin = {
     top: 80,
-    right: 0,
+    right: 50,
     bottom: 5,
-    left: 0
+    left: 50
 };
 
 let barPadding = (height-(margin.bottom+margin.top))/(top_n*5);
@@ -20,8 +20,8 @@ const tickDuration = 450;
 
 //Create svg wrapper to append into to hold chart  
 const svg = d3.select("body").append("svg")
-    .attr("width", 960)
-    .attr("height", 600);
+    .attr("width", width)
+    .attr("height", height);
 
 //Create title and caption
 let title = svg.append('text')
@@ -118,7 +118,7 @@ d3.csv('pytrends.csv').then(function(data) {
         .enter()
         .append('text')
         .attr('class', 'label')
-        .attr('x', d => x(d.value)-8)
+        .attr('x', d => x(d.value)+80)
         .attr('y', d => y(d.rank)+5+((y(1)-y(0))/2)+1)
         .style('text-anchor', 'end')
         .html(d => d.name);
@@ -128,7 +128,7 @@ d3.csv('pytrends.csv').then(function(data) {
         .enter()
         .append('text')
         .attr('class', 'valueLabel')
-        .attr('x', d => x(d.value)+5)
+        .attr('x', d => x(d.value)-50)
         .attr('y', d => y(d.rank)+5+((y(1)-y(0))/2)+1)
         .text(d => d3.format(',.0f')(d.lastValue));
 
@@ -196,7 +196,7 @@ d3.csv('pytrends.csv').then(function(data) {
             .enter()
             .append('text')
             .attr('class', 'label')
-            .attr('x', d => x(d.value)-8)
+            .attr('x', d => x(d.value)+80)
             .attr('y', d => y(top_n+1)+5+((y(1)-y(0))/2))
             .style('text-anchor', 'end')
             .html(d => d.name)    
@@ -209,7 +209,7 @@ d3.csv('pytrends.csv').then(function(data) {
             .transition()
                 .duration(tickDuration)
             .ease(d3.easeLinear)
-            .attr('x', d => x(d.value)-8)
+            .attr('x', d => x(d.value)+80)
             .attr('y', d => y(d.rank)+5+((y(1)-y(0))/2)+1);
      
         labels
@@ -217,7 +217,7 @@ d3.csv('pytrends.csv').then(function(data) {
             .transition()
                 .duration(tickDuration)
                 .ease(d3.easeLinear)
-                .attr('x', d => x(d.value)-8)
+                .attr('x', d => x(d.value)+80)
                 .attr('y', d => y(top_n+1)+5)
                 .remove();
          
@@ -227,7 +227,7 @@ d3.csv('pytrends.csv').then(function(data) {
             .enter()
             .append('text')
             .attr('class', 'valueLabel')
-            .attr('x', d => x(d.value)+5)
+            .attr('x', d => x(d.value)-50)
             .attr('y', d => y(top_n+1)+5)
             .text(d => d3.format(',.0f')(d.lastValue))
             .transition()
@@ -239,7 +239,7 @@ d3.csv('pytrends.csv').then(function(data) {
             .transition()
                 .duration(tickDuration)
                 .ease(d3.easeLinear)
-                .attr('x', d => x(d.value)+5)
+                .attr('x', d => x(d.value)-50)
                 .attr('y', d => y(d.rank)+5+((y(1)-y(0))/2)+1)
                 .tween("text", function(d) {
                     let i = d3.interpolateRound(d.lastValue, d.value);
@@ -253,7 +253,7 @@ d3.csv('pytrends.csv').then(function(data) {
             .transition()
                 .duration(tickDuration)
                 .ease(d3.easeLinear)
-                .attr('x', d => x(d.value)+5)
+                .attr('x', d => x(d.value)-50)
                 .attr('y', d => y(top_n+1)+5)
                 .remove();
     
