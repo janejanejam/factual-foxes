@@ -1,0 +1,16 @@
+
+body {
+    padding: 0.5;
+    margin: 0;
+    font-family: Arial;
+    color: maroon;
+    text-align: center;
+    font-size: 30px;
+    background-color: coral;
+  }
+  
+  #plot,
+  body,
+  html {
+    height: 100%;
+  }
