@@ -7,7 +7,7 @@
   <!-- Bootstrap CSS CDN -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <!-- Our Custom CSS -->
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style.css') }}">
 
   <!-- Font Awesome JS -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
@@ -27,38 +27,33 @@
 			<ul class="list-unstyled components">
 				<p>By Factual Foxes</p>
 				<li>
-					<a href="../index.html">Home</a>
-					<a href="../about.html">About</a>
+					<a href="/">Home</a>
+					<a href="/about">About</a>
 					<a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
 					<ul class="collapse list-unstyled" id="pageSubmenu">
 						<li>
-							<a href="../search.html">Search</a>
+							<a href="/search">Search</a>
 						</li>
 						<li>
-							<a href="./bar_chart_race/bar.html">Bar Chart Race</a>
+							<a href="/bar">Bar Chart Race</a>
 						</li>
 						<li>
-							<a href="./tree_chart/tree.html">Radial Tree</a>
+							<a href="/tree">Radial Tree</a>
 						</li>
 						<li>
-							<a href="#">Heat Map</a>
+							<a href="/map">Heat Map</a>
 						</li>
 					</ul>
-				</li>
-				<li>
-					<a href="#">Contact</a>
 				</li>
 			</ul>
 	
 		</nav>
 		<!-- Sidebar ----------------------------------------------- -->
-
-
+	
 
 
     <!-- Page Content -->
     <div id="content">
-        <!-- We'll fill this with dummy content -->
         <svg width="1300" height="1000"></svg>
     </div>
 
@@ -67,7 +62,7 @@
 
   
   <script src="https://d3js.org/d3.v4.min.js"></script>
-  <script type="text/javascript" src="./app.js"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename = 'tree/app.js') }}"></script>
 
 
   <!-- jQuery CDN - Slim version (=without AJAX) -->

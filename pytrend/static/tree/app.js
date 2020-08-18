@@ -11,8 +11,10 @@ var tree = d3.cluster()
 .size([360, 390])
 .separation(function(a, b) { return (a.parent == b.parent ? 1 : 2) / a.depth; });
 
-d3.csv("./related_word.csv", function(error, data) {
+d3.csv("static/tree/related_word.csv", function(error, data) {
     if (error) throw error;
+
+    console.log(data);
 
     var root = tree(stratify(data)
       .sort(function(a, b) { return (a.height - b.height) || a.id.localeCompare(b.id); }));
