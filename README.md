@@ -25,7 +25,7 @@ https://pypi.org/project/pytrends/
 (* Beautiful Soup)
 
 ### Visualizations
-* <b> Choropleth Plotly US Map <b>: You are able to select a keyword from the dropdown menu.  Once the keyword is selected, you can hover over a particular state and the top keyword question based on popularity will pop up along with the state abbreviation and popularity rating for that particular state.
+* <b> Choropleth Plotly US Map </b>: You are able to select a keyword from the dropdown menu.  Once the keyword is selected, you can hover over a particular state and the top keyword question based on popularity will pop up along with the state abbreviation and popularity rating for that particular state.
 
 * Radial
 
