@@ -27,9 +27,11 @@
 			<ul class="list-unstyled components">
 				<p>By Factual Foxes</p>
 				<li>
-					<a href="/">Home</a>
-					<a href="/about">About</a>
-					<a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+					<a href="/"><i class="fas fa-home"></i> Home</a>
+					<a href="/about"><i class="fas fa-question"></i>&nbsp About</a>
+					<a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+						<i class="fas fa-copy"></i> Pages
+					</a>
 					<ul class="collapse list-unstyled" id="pageSubmenu">
 						<li>
 							<a href="/search">Search</a>
@@ -49,22 +51,39 @@
 	
 		</nav>
 		<!-- Sidebar ----------------------------------------------- -->
-	
+
+
+
 
 
     <!-- Page Content -->
     <div id="content">
-        <svg width="1300" height="1000"></svg>
+        <!-- We'll fill this with dummy content -->
+
+        <img src="https://www.movingtrafficmedia.com/wp-content/uploads/2020/07/Google-Trends-Featured-Image-770x462.png" alt="Google Trend" width=60%> 
+        <h3>Dataset</h3>
+        <a href="https://trends.google.com/trends/?geo=US" target="_blank">https://trends.google.com/trends/?geo=US</a>
+        <br>
+        <h3>Method</h3>
+        <a href="https://pypi.org/project/pytrends/" target="_blank">API wrapper for Google Trends: https://pypi.org/project/pytrends/</a>
+        <br>
+        <h3>Tools</h3>
+        <p>
+            <ul>
+                <li>Javascript</li>
+                <li>D3</li>
+                <li>HTML/CSS</li>
+                <li>Postgresql</li>
+                <li>Plotly Dash</li>
+                <li>Pytrends</li>
+                <li>Pandas</li>
+            </ul>
+        </p>
     </div>
 
   </div>  
 
-
   
-  <script src="https://d3js.org/d3.v4.min.js"></script>
-  <script type="text/javascript" src="{{ url_for('static', filename = 'tree/app.js') }}"></script>
-
-
   <!-- jQuery CDN - Slim version (=without AJAX) -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <!-- Popper.JS -->

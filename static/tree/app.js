@@ -45,6 +45,22 @@ d3.csv("static/tree/related_word.csv", function(error, data) {
       .style("text-anchor", function(d) { return d.x < 180 === !d.children ? "start" : "end"; })
       .attr("transform", function(d) { return "rotate(" + (d.x < 180 ? d.x - 90 : d.x + 90) + ")"; })
       .text(function(d) { return d.id.substring(d.id.lastIndexOf(".") + 1); });
+
+
+    // Create the event listeners with transitions
+    node.on("mouseover", function() {
+      d3.select(this)
+                .transition()
+                .duration(500)
+                .attr("fill", "red");
+    })
+        .on("mouseout", function() {
+          d3.select(this)
+                .transition()
+                .duration(500)
+                .attr("fill", "black");
+        });
+    
 });
 
 function project(x, y) {

@@ -1,3 +1,16 @@
+.h1 {
+    font-size: 100px;
+    line-height: 100px;
+    padding: 50px;
+    top: 50px;
+    margin-top: 20px;
+    transform: translateY(0);
+    opacity: 1;
+    position: relative;
+    z-index: 9;
+  }
+
+
 /* Map ------------------------------------------------------------------------------------------------------------------------------------------*/
 #map {
     padding: 0.5;
@@ -24,11 +37,6 @@
   fill: #999;
 }
 
-.node text:hover {
-    color: #7386D5;
-    background: #fff;
-}
-
 .node text {
   font: 10px sans-serif;
 }
@@ -47,6 +55,8 @@
   stroke-opacity: 0.4;
   stroke-width: 1.5px;
 }
+
+
 
 /* Bar ------------------------------------------------------------------------------------------------------------------------------------------*/
 

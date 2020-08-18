@@ -27,9 +27,11 @@
 			<ul class="list-unstyled components">
 				<p>By Factual Foxes</p>
 				<li>
-					<a href="/">Home</a>
-					<a href="/about">About</a>
-					<a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+					<a href="/"><i class="fas fa-home"></i> Home</a>
+					<a href="/about"><i class="fas fa-question"></i>&nbsp About</a>
+					<a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+						<i class="fas fa-copy"></i> Pages
+					</a>
 					<ul class="collapse list-unstyled" id="pageSubmenu">
 						<li>
 							<a href="/search">Search</a>
@@ -45,7 +47,6 @@
 						</li>
 					</ul>
 				</li>
-
 			</ul>
 	
 		</nav>
@@ -53,36 +54,17 @@
 	
 
 
-        <!-- Page Content -->
-        <div id="content">
-            <div id="map">
-            <label for="keyword">Choose a keyword:</label>
+    <!-- Page Content -->
+    <div id="content">
+        <svg width="1300" height="1000"></svg>
+    </div>
 
-                <select name="keyword" id="dropdown">
-                    <option value="how">how</option>
-                    <option value="what">what</option>
-                    <option value="where">where</option>
-                    <option value="will">will</option>
-                    <option value="who">who</option>
-                    <option value="when">when</option>
-                    <option value="which">which</option>
-                    <option value="why">why</option>
-                    <option value="can">can</option>
-                </select>
-            </div>
-
-            <div id="plot"></div>
-        </div>
   </div>  
 
 
   
   <script src="https://d3js.org/d3.v4.min.js"></script>
-
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.1/d3.min.js"></script>
-
-  <script type="text/javascript" src="{{ url_for('static', filename = 'map/plots.js') }}" async></script>
+  <script type="text/javascript" src="{{ url_for('static', filename = 'tree/app.js') }}"></script>
 
 
   <!-- jQuery CDN - Slim version (=without AJAX) -->
