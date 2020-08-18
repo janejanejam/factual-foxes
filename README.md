@@ -23,3 +23,10 @@ https://pypi.org/project/pytrends/
 * Pytrends
 * Pandas
 (* Beautiful Soup)
+
+### Visualizations
+* Choropleth Plotly US Map:  On the choropleth plotly US map you are able to select a keyword from the dropdown menu.  Once the keyword is selected, you can hover over a particular state and the top keyword question based on popularity will pop up along with the state abbreviation and popularity rating for that particular state.
+
+* Radial
+
+* Bar Graph
