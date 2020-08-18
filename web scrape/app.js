@@ -35,31 +35,6 @@ function createPlots(month) {
         Plotly.newPlot("bubble", data1, layout_b); 
       });
   }  
-// create the function to get the necessary data
-function getInfo(month) {
-    // read the csvfile to get data
-    d3.csv("top_queries.csv").then((data)=> {
-        
-        // get the metadata info for the demographic panel
-        var metadata = data.metadata;
-
-        // console.log(metadata)
-
-        // filter meta data info by id
-        var result = metadata.filter(meta => meta.month === month)[0];
-
-        // select demographic panel to put data
-        var rankInfo = d3.select("#sample-metadata");
-        
-        // empty the demographic info panel each time before getting new month info
-        rankInfo.html("");
-
-        // grab the necessary demographic data data for the month and append the info to the panel
-        Object.entries(result).forEach((key) => {   
-                rankInfo.append("h5").text(key[0] + ": " + key[1] + "\n");    
-        });
-    });
-}
 
 // create the function for the change event
 function optionChanged(month) {
@@ -83,7 +58,6 @@ function init() {
 
         // call the functions to display the data and the plots to the page
         createPlots(data.month[0]);
-        getInfo(data.month[0]);
     });
 }
 
