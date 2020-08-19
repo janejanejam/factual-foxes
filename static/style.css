@@ -264,6 +264,8 @@ a.article, a.article:hover {
     CONTENT STYLE
 ----------------------------------------------------- */
 #content {
+    /* display: flex; */
+    /* position: absolute; */
     width: 100%;
     padding: 20px;
     min-height: 100vh;

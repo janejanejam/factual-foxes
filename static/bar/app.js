@@ -24,10 +24,10 @@ const svg = d3.select("#content").append("svg")
     .attr("height", 600);
 
 //Create title and caption
-let title = svg.append('text')
-    .attr('class', 'title')
-    .attr('y', 24)
-    .html('Google Keywords Trend 2020');
+// let title = svg.append('text')
+//     .attr('class', 'title')
+//     .attr('y', 24)
+//     .html('Google Keywords Trend 2020');
    
 let caption = svg.append('text')
     .attr('class', 'caption')

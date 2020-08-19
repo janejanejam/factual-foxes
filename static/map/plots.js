@@ -13,7 +13,14 @@ function updatemap(e){
         autocolorscale: true
     }];
     var layout = {
-        title: 'July 2020 Pytrend Keyword Questions in the US',
+        title: {
+            text: 'July 2020 Pytrend Keyword Questions in the US',
+            font: {
+                family: 'Arial',
+                size: 32,
+                color: 'black'
+            }
+        },
             geo:{
                 scope: 'usa',
                 countrycolor: 'rgb(255, 255, 255)',
@@ -43,7 +50,15 @@ var data = [{
 console.log(data)
 
 var layout = {
-title: 'July 2020 Pytrend Keyword Questions in the US',
+    title: {
+        text: 'July 2020 Pytrend Keyword Questions in the US',
+        font: {
+            family: 'Arial',
+            size: 32,
+            color: 'black'
+        }
+    },
+    
     geo:{
         scope: 'usa',
         countrycolor: 'rgb(255, 255, 255)',

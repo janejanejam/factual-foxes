@@ -51,39 +51,40 @@
 	
 		</nav>
 		<!-- Sidebar ----------------------------------------------- -->
-
-
-
+	
 
 
     <!-- Page Content -->
-    <div id="content">
-        <!-- We'll fill this with dummy content -->
 
-        <img src="https://www.movingtrafficmedia.com/wp-content/uploads/2020/07/Google-Trends-Featured-Image-770x462.png" alt="Google Trend" width=60%> 
-        <h3>Dataset</h3>
-        <a href="https://trends.google.com/trends/?geo=US" target="_blank">https://trends.google.com/trends/?geo=US</a>
-        <br>
-        <h3>Method</h3>
-        <a href="https://pypi.org/project/pytrends/" target="_blank">API wrapper for Google Trends: https://pypi.org/project/pytrends/</a>
-        <br>
-        <h3>Tools</h3>
-        <p>
-            <ul>
-                <li>Javascript</li>
-                <li>D3</li>
-                <li>HTML/CSS</li>
-                <li>Postgresql</li>
-                <li>Plotly Dash</li>
-                <li>Pytrends</li>
-                <li>Pandas</li>
-            </ul>
-        </p>
-    </div>
+	<div class="row" id="content">
+		<div class="col-md-12 text-center">
+			<h1>Top Google Search Queries by Month in 2020</h1>
+			<p>Use the drop down below to explore the dataset</p>
+		</div>
+		<div class="col-md-2">
+			<div class="well">
+				<h5>Sample month:</h5>
+				<select id="selDataset" onchange="optionChanged(this.value)"></select>
+			</div>
+			<div id="sample-metadata" class="panel-body">
+			</div>
+		
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div id="bubble"></div>
+			</div>
+		</div>
+	</div>
+
 
   </div>  
 
-  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename = 'bubble/app.js') }}"></script>
+
   <!-- jQuery CDN - Slim version (=without AJAX) -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <!-- Popper.JS -->
