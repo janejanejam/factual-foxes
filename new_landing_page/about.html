@@ -1,0 +1,113 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Google Trend Analysis</title>
+
+  <!-- Pretty Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+
+  <!-- CSS Defaults -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/default.css">
+
+  <!-- Main CSS file -->
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+  <body>
+    <div class="loading-container">
+      <div class="loading-screen">
+      </div>
+      <!-- <ul class='loading-transition'>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul> -->
+    </div>
+
+    <header>
+      <nav class="main-navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="tree.html">Tree</a></li>
+          <li><a href="bar.html">Bar</a></li>
+          <li><a href="map.html">Map</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Better to wrap barba container as close as possible -->
+    <div data-barba="wrapper">
+      <!-- Only this section changes on link navigation -->
+      <main data-barba="container" data-barba-namespace="about">
+        <div class="heading-container">
+
+
+
+
+          <!-- <h1 class="main-heading is-animated"><br><span class="green-heading-bg">About</span> this project.</h1>
+          <img src="img/hand-2.png" class="main-img is-animated"> -->
+
+
+          <h3><span class="green-heading-bg">About</span></h3>
+          <br>
+          <h4>Dataset</h4>
+          <a href="https://trends.google.com/trends/?geo=US" target="_blank">https://trends.google.com/trends/?geo=US</a>
+          <br>
+          <h4>Method</h4>
+          <a href="https://pypi.org/project/pytrends/" target="_blank">API wrapper for Google Trends: https://pypi.org/project/pytrends/</a>
+          <br>
+          <h4>Tools</h4>
+          <p>
+              <ul>
+                  <li>Javascript</li>
+                  <li>D3</li>
+                  <li>HTML/CSS</li>
+                  <li>Postgresql</li>
+                  <li>Plotly Dash</li>
+                  <li>Pytrends</li>
+                  <li>Pandas</li>
+              </ul>
+          </p>
+
+        </div>
+      </main>
+    </div>
+
+    <footer>
+      <ul>
+        <li><a href="/">By Factual Foxes</a></li>
+        <li>•</li>
+        <li><a href="https://github.com/janejanejam/factual-foxes" target="_blank">Find on Github</a></li>
+      </ul>
+
+    </footer>
+
+  </body>
+
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+  <!-- Barba Core -->
+  <script src="https://unpkg.com/@barba/core"></script>
+
+  <!-- GSAP for animation -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+
+  <!-- Some basic helper functions -->
+  <script src="js/helper.js"></script>
+
+  <!-- Main JS file -->
+  <script src="js/main.js"></script>
+
+
+</html>
