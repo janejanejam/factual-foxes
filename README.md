@@ -27,7 +27,7 @@ https://pypi.org/project/pytrends/
 ### Visualizations
 * <b> Choropleth Plotly US Map </b>: You are able to select a keyword from the dropdown menu.  Once the keyword is selected, you can hover over a particular state and the top keyword question based on popularity will pop up along with the state abbreviation and popularity rating for that particular state.
 
-* <b> Radial Plot </b>: Radial tree chart to show top search queries beginning with select keywowrds: ['how', 'what', 'where', 'will', 'who', 'when', 'which', 'why', 'can'].
+* <b> Radial Plot </b>: Radial tree chart to show top search queries beginning with select keywords: ['how', 'what', 'where', 'will', 'who', 'when', 'which', 'why', 'can'].
 
 * <b> Animated Bar Graph </b>: Bar chart race that shows daily search ranking for 9 keywords.
 
