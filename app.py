@@ -24,9 +24,6 @@ def index():
 def about():
    return render_template('about.html')
 
-@app.route('/bubble')
-def search():
-   return render_template('bubble.html')
 
 @app.route('/bar')
 def bar():
